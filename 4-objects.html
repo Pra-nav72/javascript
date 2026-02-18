@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        const item = {
+            name: 'socks',
+            price: 340,
+            qty: 4
+        };
+
+        //display all elements inside item
+        console.log(item);      //{name: 'socks', price: 340, qty: 4}
+
+        //values of the property name & price
+        console.log(item.name);     //socks
+        console.log(item.price);    // 340
+
+        //modify the values of price & qty
+        item.price = 555;
+        item.qty = 11;
+
+        //adds new property
+        item.newProperty = true;
+        console.log(item);      //{name: 'socks', price: 555, qty: 11, newProperty: true}
+
+
+        //removing the new property
+        delete item.newProperty;
+        console.log(item);      //{name: 'socks', price: 555, qty: 11}
+
+        //type of the item 
+        console.log(typeof item);       //object
+
+
+        // Nested Objects
+        const product = {
+            name: 'shirt',
+            //here we use : instead of =
+            details : {
+                fibre: 'Cotton',
+                wash: 'dry wash'
+            }
+        };
+    
+        // Accessing the values of nested objects
+        console.log(`nested object: ${product.details.fibre}`)   //nested object: Cotton
+
+
+
+        // Function inside object
+        const items1 = {
+            name : 'movies',
+
+            fun: function demo(){
+                console.log('this funcion is inside an object');
+            }
+        }
+
+        // Accessing the function
+        items1.fun();   //this funcion is inside an object
+    </script>
+</body>
+</html>

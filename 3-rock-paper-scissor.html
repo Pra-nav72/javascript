@@ -27,42 +27,63 @@
     <button onclick="playGame('rock')">Rock 👊</button>
     <button onclick="playGame('paper')">Paper 🖐️</button>
     <button onclick="playGame('scissors')">Scissors ✌️</button>
+    <button onclick="reset()">RESET</button>
 
 
     <script>
+        let wins = 0;
+        let losses = 0;
+        let ties = 0;
+        function reset(){
+            wins = 0;
+            losses = 0;
+            ties = 0;
+            console.log('game reset!!');
+        }
+
         function playGame(playerMove){
             const gm = gameMove();
+
             if (playerMove === 'rock'){
                 if (gm === 'rock'){
-                    alert(`your move: ${playerMove}, game: ${gm}. its a TIE!!`);
+                    ties++;
+                    alert(`your move: ${playerMove}, game: ${gm}. its a TIE!! \n Wins: ${wins} Losses: ${losses} ties: ${ties}`);
                 }
                 else if (gm === 'paper'){
-                    alert(`your move: ${playerMove}, game: ${gm}. you loose!!`);
+                    losses++;
+                    alert(`your move: ${playerMove}, game: ${gm}. you loose!! \n Wins: ${wins} Losses: ${losses} ties: ${ties}`);
                 }
                 else if (gm === 'scissors'){
-                    alert(`your move: ${playerMove}, game: ${gm}. you win!!`);
+                    wins++;
+                    alert(`your move: ${playerMove}, game: ${gm}. you win!! \n Wins: ${wins} Losses: ${losses} ties: ${ties}`);
                 }
             }
             else if (playerMove === 'paper'){
                 if (gm === 'rock'){
-                    alert(`your move: ${playerMove}, game: ${gm}. you win!!`);
+                    wins++;
+                    alert(`your move: ${playerMove}, game: ${gm}. you win!! \n Wins: ${wins} Losses: ${losses} ties: ${ties}`);
                 }
                 else if (gm === 'paper'){
-                    alert(`your move: ${playerMove}, game: ${gm}. its a TIE!!`);
+                    ties++;
+                    alert(`your move: ${playerMove}, game: ${gm}. its a TIE!! \n Wins: ${wins} Losses: ${losses} ties: ${ties}`);
                 }
                 else if (gm == 'scissors'){
-                    alert(`your move: ${playerMove}, game: ${gm}. you loose!!`);
+                    losses++;
+                    alert(`your move: ${playerMove}, game: ${gm}. you loose!! \n Wins: ${wins} Losses: ${losses} ties: ${ties}`);
                 }
             }
             else if (playerMove === 'scissors'){
                 if (gm === 'rock'){
-                    alert(`your move: ${playerMove}, game: ${gm}. you loose!!`);
+                    losses++;
+                    alert(`your move: ${playerMove}, game: ${gm}. you loose!! \n Wins: ${wins} Losses: ${losses} ties: ${ties}`);
                 }
                 else if (gm === 'paper'){
-                    alert(`your move: ${playerMove}, game: ${gm}. you win!!`);
+                    wins++;
+                    alert(`your move: ${playerMove}, game: ${gm}. you win!! \n Wins: ${wins} Losses: ${losses} ties: ${ties}`);
                 }
                 else if (gm == 'scissors'){
-                    alert(`your move: ${playerMove}, game: ${gm}. its a TIE!!`);
+                    ties++;
+                    alert(`your move: ${playerMove}, game: ${gm}. its a TIE!! \n Wins: ${wins} Losses: ${losses} ties: ${ties}`);
                 }
             }
         }
