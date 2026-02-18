@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables</title>
+    <style>
+        button{
+            margin: 50px 5px auto 50px;
+            background-color: aquamarine;
+            padding: 5px 8px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showQuantity()">show Quantity</button>
+    <button onclick="add2Cart()">add to Cart</button>
+    <button onclick="add2()">+2</button>
+    <button onclick="add3()">+3</button>
+    <button onclick="reset()">reset cart</button>
+
+    <script>
+            let qty = 0;
+            function showQuantity(){
+                console.log(`total Quantity is: ${qty}`);
+            }        
+
+            function add2Cart(){
+                qty = qty + 1;
+                console.log('item added!');
+            }
+
+            function add2(){
+                qty = qty + 2;
+                console.log('2 more items added!');
+            }
+
+            function add3(){
+                qty = qty + 3;
+                console.log('3 more items added!');
+            }
+            function reset(){
+                qty = 0;
+                console.log('items removed from the cart!');
+            }
+    </script>
+</body>
+</html>
