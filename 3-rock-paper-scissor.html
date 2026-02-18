@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        button{
+            padding: 5px 10px;
+            margin: 10px;
+            font-size: large;
+            border-width: 0 2px 2px 0;
+            border-radius: 8px;
+            background-color: rgb(207, 117, 136);
+        }
+    </style>
+</head>
+<body>
+    <button onclick="playGame('rock')">Rock 👊</button>
+    <button onclick="playGame('paper')">Paper 🖐️</button>
+    <button onclick="playGame('scissors')">Scissors ✌️</button>
+
+
+    <script>
+        function playGame(playerMove){
+            const gm = gameMove();
+            if (playerMove === 'rock'){
+                if (gm === 'rock'){
+                    alert(`your move: ${playerMove}, game: ${gm}. its a TIE!!`);
+                }
+                else if (gm === 'paper'){
+                    alert(`your move: ${playerMove}, game: ${gm}. you loose!!`);
+                }
+                else if (gm === 'scissors'){
+                    alert(`your move: ${playerMove}, game: ${gm}. you win!!`);
+                }
+            }
+            else if (playerMove === 'paper'){
+                if (gm === 'rock'){
+                    alert(`your move: ${playerMove}, game: ${gm}. you win!!`);
+                }
+                else if (gm === 'paper'){
+                    alert(`your move: ${playerMove}, game: ${gm}. its a TIE!!`);
+                }
+                else if (gm == 'scissors'){
+                    alert(`your move: ${playerMove}, game: ${gm}. you loose!!`);
+                }
+            }
+            else if (playerMove === 'scissors'){
+                if (gm === 'rock'){
+                    alert(`your move: ${playerMove}, game: ${gm}. you loose!!`);
+                }
+                else if (gm === 'paper'){
+                    alert(`your move: ${playerMove}, game: ${gm}. you win!!`);
+                }
+                else if (gm == 'scissors'){
+                    alert(`your move: ${playerMove}, game: ${gm}. its a TIE!!`);
+                }
+            }
+        }
+        function gameMove(){
+            const n = Math.random();
+            
+            let gameMove = '';
+
+            if (n >=0 && n < 1/3){
+                gameMove = 'rock';
+            }
+            else if (n>= 1/3 && n < 2/3){
+                gameMove = 'paper';
+            }
+            else if (n >= 2/3 && n < 1){
+                gameMove = 'scissors';
+            }
+
+            console.log(gameMove, n);
+            return gameMove;
+        }
+       
+    </script>
+</body>
+</html>
