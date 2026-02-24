@@ -59,10 +59,37 @@
             fun: function demo(){
                 console.log('this funcion is inside an object');
             }
-        }
+        };
 
         // Accessing the function
         items1.fun();   //this funcion is inside an object
+
+
+        const object1 = {
+            pen: 'Reynolds',
+            price: 7888
+        };
+
+        //when variable name and oject property name is same
+        // const pen = object1.pen;     ----> NOT USE THIS
+        const {pen, price} = object1;  // DESTRUCTURING SHORTCUT
+        console.log(pen);
+        console.log(price);
+
+        //we can also reuse the above
+        const object2 = {
+            // pen:pen,   -----> if name of property & value is same then use 👇
+            pen,         // SHORT-HAND PROPERTY --> write once only.
+            method(){
+                console.log("SHORT-HAND METHOD PROPERTY");
+            }
+
+        };
+
+        console.log(object2.method());
+        console.log(object2.pen);
+
+
     </script>
 </body>
 </html>
