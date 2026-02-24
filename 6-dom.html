@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button >submit</button>
+
+
+    <script>
+        // // change the webpage title
+        document.title = "DOM";
+
+        // //innerHTML => all the HTML inside the <body> element 
+        // document.body.innerHTML = '<h1> THIS IS DOM </h1>';
+
+        // // it will override the line 14, i.e. only hello button will appear on the screen 
+        // document.body.innerHTML = '<button> hello </button>';
+
+
+        // it will access first <button> element of the page
+        let x = document.querySelector('button');
+        console.log(x, "query selector");
+
+        //changes the html text inside the button
+        document.querySelector('button').innerHTML = "CHANGHED";
+        
+
+    </script>
+</body>
+</html>
