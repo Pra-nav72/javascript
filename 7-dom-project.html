@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Projects</title>
+</head>
+<body>
+    <h2>YouTube Subscribe button</h2>
+    <button class="js-subs" onclick="subscribe()">Subscribe</button>
+    <br><br>
+
+    <p>Rock Paper Scissors</p>
+    <a href="3-rock-paper-scissor.html" target="_blank">click here</a>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>orders under <span>&#8377</span>499 = Extra <span>&#8377</span>40 Shipping charges</p>
+    <p>orders under <span>&#8377</span>499 = FREE Shipping</p>
+
+    <!-- onkeydown is input from keyboard, onclick is mouse input -->
+     <!-- onkeydown(eventListener) has an object named 'event' that holds various info. of the event -->
+    <input type="text" required class="js-cost" placeholder="cost of order" 
+        onkeydown="calculateKeyDown(event)">
+
+    <button class="js-calculate" onclick="calculate()">calculate</button><br>
+    
+    <p class="js-total"></p>
+
+    <script>
+        function subscribe(){
+            const btnSubs = document.querySelector('.js-subs');
+            // innerHTML returns text along with whitespaces. Hence, we use innerText
+            if (btnSubs.innerText === 'Subscribe'){
+                btnSubs.innerHTML = 'Subscribed';
+            }
+            else{
+                btnSubs.innerHTML = 'Subscribe';
+            }
+        }
+
+
+        function calculate(){
+            const inputCost = (Number)(document.querySelector('.js-cost').value);
+            const total = document.querySelector('.js-total');
+            if(inputCost < 499){
+                console.log(inputCost);
+                total.innerHTML = `<span>&#8377</span>${(inputCost + 40)}`;
+            }
+            else if (inputCost >= 499){
+                console.log(inputCost);
+                total.innerHTML= `<span>&#8377</span>${inputCost}`;
+            }
+            else{
+                total.innerHTML = "expected NUMBER!";
+                console.log(inputCost);
+            }
+        }
+
+        function calculateKeyDown(event){
+            // if the clicked button is 'Enter' then also calculate the total cost
+            if (event.key === 'Enter'){
+                console.log(event);
+                calculate();
+            }
+        }
+        
+    </script>
+</body>
+</html>
