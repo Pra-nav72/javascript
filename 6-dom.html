@@ -8,6 +8,8 @@
 <body>
     <button >submit</button>
 
+    <!-- js-btn is written, indicates its a js object -->
+    <button class="js-btn">login</button>
 
     <script>
         // // change the webpage title
@@ -26,7 +28,11 @@
 
         //changes the html text inside the button
         document.querySelector('button').innerHTML = "CHANGHED";
-        
+
+        // accessing html element using class name
+        const btnElement = document.querySelector('.js-btn');
+        console.log(btnElement);
+        console.log(`innerHtML of btn element: ${btnElement.innerHTML}`);
 
     </script>
 </body>
