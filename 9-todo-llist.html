@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="styles/todo.css">
+</head>
+<body>
+    <p style="margin: 15px;">Todo List</p>
+
+    <div class="main">
+        <!-- todo Name -->
+        <input type="text" placeholder="todo name" class="js-input-todo1" onkeydown="addTodoKey(event)">
+        
+        <!-- Due Date -->
+        <input type="date" class="js-due-date-input" value="2025-06-15" onkeydown="addTodoKey(event)">
+        
+        <!-- add Button -->
+        <button onclick="addTodo()" class="add-button">Add</button>
+    </div>
+    <br><br><br>
+    <div class="js-todo-div todo-div">text</div>
+
+ 
+
+
+    <script src="scripts/todo.js"></script>
+</body>
+</html>
