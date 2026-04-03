@@ -10,6 +10,12 @@
         const myArrays = [34, 45, 22, 56, 0];
         console.log(`arrays: ${myArrays}`);
         
+        const myArrays2 = myArrays; // both references will point to same object
+        const myArrays3 = myArrays.slice(); // a different object same as myArrays will be created for myArrays3.
+
+        myArrays.push(23444);
+        console.log(`myArrays2 after myArrays.push(23444): ${myArrays2}`)
+        console.log(`myArrays3: ${myArrays3}`)
     </script>
 </body>
 </html>

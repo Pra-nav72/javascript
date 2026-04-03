@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Functions</title>
+</head>
+<body>
+    <script>
+        // start the timer for 3sec to execute the function & start executing other codes
+        setTimeout(()=>{
+            console.log("setTimeout() will execute in future");
+            // this will stop the execution of setInterval()
+            clearInterval(intervalId);
+            console.log("setInterval() execution has been stopped!");
+        }, 6000);
+
+        // this will be executed berore setTimeout.(Asynchronus function)
+        console.log("this will execute before setTimeout");
+        console.log("this will also execute before setTimeout");
+
+        // similar to setTimeout() but it keeps executing after the specified time
+        // setInterval returns a number id which is used to stop its execution
+        let intervalId = setInterval(()=> {
+            console.log("hi have a great time!");
+        }, 1500);
+
+        console.log("written after setInterval()");
+
+    </script>
+</body>
+</html>
