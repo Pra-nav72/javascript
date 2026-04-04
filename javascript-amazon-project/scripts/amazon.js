@@ -31,6 +31,7 @@
 
 
 // generating HTML by looping through each element of products Array.
+import {cart} from '../data/cart.js';
 let productsHTML = '';
 
 products.forEach((product) =>{
