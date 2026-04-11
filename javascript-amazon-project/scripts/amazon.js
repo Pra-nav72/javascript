@@ -32,6 +32,8 @@
 // generating HTML by looping through each element of products Array.
 import {cart, addToCart} from '../data/cart.js';
 import { products } from '../data/products.js';
+// ./ means current folder       &  ../ means previos folder
+import { formatMoney } from './utils/money.js';
 let productsHTML = '';
 
 products.forEach((product) =>{
@@ -56,7 +58,7 @@ products.forEach((product) =>{
           </div>
 
           <div class="product-price">
-            &#8377;${(product.priceCents/10).toFixed(2)}
+            ${formatMoney(product.priceCents)}
           </div>
 
           <div class="product-quantity-container">
