@@ -20,6 +20,10 @@ body{
     min-height: 60vh;
 }
 
+.container h1{
+    margin: 2vh auto;
+}
+
 .facts{
     background-color: #00e4be;
     border: 1px black solid;
@@ -31,7 +35,7 @@ body{
 }
 
 .btn-get-facts{
-    background-color: #00c9a7;
+    background-color: #ec96ff;
     border: none;
     border-bottom: 2px solid #845ec2;
     border-radius: 2vh;
@@ -51,4 +55,10 @@ body{
 
 .hidden{
     display: none;
+}
+.error{
+    color: red;
+    font-size: large;
+    font-weight: bold;
+    font-style: oblique;
 }
