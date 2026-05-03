@@ -18,7 +18,7 @@ async function fetchData(){
             textbox.textContent = `Error! status: ${response.status}`;
             throw new error(`HTTP error! status: ${response.status}`);
         }
-        const data = response.json();
+        const data = response.json();   // converting response object to js object.
         data.then((d) =>{
             const facts = d.facts;
             // console.log(facts);
